@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Notes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #e0f7fa;
+        }
+        .container {
+            background: #1e1e1e;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #00bcd4;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #00bcd4;
+            font-weight: bold;
+            margin-right: 22px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #00bcd4;
+            border-radius: 5px;
+            background-color: #2a2a2a;
+            font-size: 16px;
+            color: #e0f7fa;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #00bcd4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #008ba3;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #00bcd4;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Create New Note</h1>
+        <form action="/posts/new" method="post">
+            <label for="name">Topic
+                <input type="text" placeholder="Enter Topic" name="username">
+            </label>
+            <hr>
+            <label for="content">Description
+                <input type="text" placeholder="Description" name="content">
+            </label>
+            <hr>
+            <button type="submit">Create Note</button>
+        </form>
+    </div>
+</body>
+</html>
